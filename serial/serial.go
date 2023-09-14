@@ -7,19 +7,19 @@
 package serial
 
 import (
-	"github.com/tarm/serial"
+	tserial "github.com/tarm/serial"
 )
 
 // New creates a serial port.
 //
 // This is currently a simple wrapper around tarm serial.
-func New(options ...Option) (*serial.Port, error) {
+func New(options ...Option) (*tserial.Port, error) {
 	cfg := defaultConfig
 	for _, option := range options {
 		option.applyConfig(&cfg)
 	}
-	config := serial.Config{Name: cfg.port, Baud: cfg.baud}
-	p, err := serial.OpenPort(&config)
+	config := tserial.Config{Name: cfg.port, Baud: cfg.baud}
+	p, err := tserial.OpenPort(&config)
 	if err != nil {
 		return nil, err
 	}
