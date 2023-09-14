@@ -21,8 +21,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"github.com/warthog618/modem/at"
-	"github.com/warthog618/modem/trace"
+	"github.com/ulbios/modem/at"
+	"github.com/ulbios/modem/trace"
 )
 
 const (
